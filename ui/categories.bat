@@ -1,0 +1,1 @@
+pyside6-uic categories.ui -o categories.py

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1131</width>
+    <height>814</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QLineEdit {
+    background-color: #2b2b2b;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 1px solid #00aaff;
+    background-color: #333;
+}
+
+QPushButton {
+    background-color: #007acc;
+    border: 1px solid #005f99;
+    border-radius: 4px;
+    padding: 6px;
+    color: #ffffff;
+}
+
+QPushButton:hover {
+    background-color: #005f99;
+}
+
+QPushButton:pressed {
+    background-color: #004080;
+}
+
+QLabel {
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+QCheckBox {
+    color: #ffffff;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #007acc;
+    background: #2b2b2b;
+}
+
+QCheckBox::indicator:checked {
+    background: #007acc;
+    border: 1px solid #005f99;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="3">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>462</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="btn_json">
+      <property name="text">
+       <string>json</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="btn_xlsx">
+      <property name="text">
+       <string>xlsx</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btn_setting">
+      <property name="text">
+       <string>настройки</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="4">
+     <widget class="QTextEdit" name="text_output">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="btn_stop">
+      <property name="minimumSize">
+       <size>
+        <width>82</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>стоп</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="btn_start">
+      <property name="text">
+       <string>старт</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>463</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1131</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

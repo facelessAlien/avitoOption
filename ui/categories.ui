@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1228</width>
+    <height>733</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Основное окно */
+QMainWindow {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+/* Список категорий */
+QListWidget {
+    background-color: #2E2E2E;
+    border: 2px solid #3A3A3A;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+
+QListWidget::item {
+    padding: 10px;
+}
+
+QListWidget::item:selected {
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Скроллбар */
+QScrollBar:vertical {
+    border: none;
+    background: #2E2E2E;
+    width: 8px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #5A5A5A;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #7A7A7A;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    background: none;
+    border: none;
+}
+
+/* Выделенный элемент */
+QListWidget::item:hover {
+    background-color: #4A4A4A;
+    border-radius: 5px;
+}
+
+/* Окно диалога */
+QDialog {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+/* Поля ввода */
+QLineEdit {
+    background-color: #2E2E2E;
+    border: 2px solid #3A3A3A;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #0078D7;
+}
+
+/* Кнопки */
+QPushButton {
+    background-color: #0078D7;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+QPushButton:hover {
+    background-color: #005FA3;
+}
+
+QPushButton:pressed {
+    background-color: #004A7C;
+}
+</string>
+  </property>
+  <widget class="QListWidget" name="listWidget_total_categories_2">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>10</y>
+     <width>771</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+   </property>
+   <property name="viewMode">
+    <enum>QListView::ViewMode::ListMode</enum>
+   </property>
+   <property name="uniformItemSizes">
+    <bool>false</bool>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_total_categories">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>400</width>
+     <height>711</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>400</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
+   </property>
+   <property name="viewMode">
+    <enum>QListView::ViewMode::ListMode</enum>
+   </property>
+   <property name="uniformItemSizes">
+    <bool>false</bool>
+   </property>
+   <property name="sortingEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_search">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>10</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
