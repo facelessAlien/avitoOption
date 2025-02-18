@@ -34,11 +34,10 @@
 1. **Создайте бота** через [@BotFather](https://t.me/BotFather).
 2. **Получите API-токен** после создания бота.
 3. **Узнайте ваш `chat_id`** через [@userinfobot](https://t.me/userinfobot).
-4. **Укажите их в `config.json`**:
 ```json
 "telegram_bot_token": "TOKEN::CHAT_ID",
 "send_tg": true
-
+```
 ## 🛠️ Установка
 
 ### 🔹 1. Установка через исходный код
@@ -52,4 +51,4 @@ source venv/bin/activate  # Для Linux/macOS
 venv\Scripts\activate      # Для Windows
 pip install -r requirements.txt
 python avitoOption.py
-
+```
