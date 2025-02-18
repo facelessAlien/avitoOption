@@ -1,4 +1,4 @@
-AvitoScraper
+avitoOption
 
 📌 Описание проекта
 
