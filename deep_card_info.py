@@ -151,9 +151,3 @@ def card_info(thread, driver, total_urls: list, tg_token: str = None, chat_id: s
         print('                      ')
         print("🔸" * 50 + '\n\n')
 
-# links = [
-#     'https://www.avito.ru/moskva/telefony/iphone_15_pro_max_256_gb_3538770763?context=H4sIAAAAAAAA_wE_AMD_YToyOntzOjEzOiJsb2NhbFByaW9yaXR5IjtiOjA7czoxOiJ4IjtzOjE2OiI2amNlRjJpR2h5UUxnQlZHIjt94La5Qj8AAAA', ]
-#
-# card_info(driver=make_driver(headless=False,
-#                              proxies_value='brd-customer-hl_bed2b0df-zone-datacenter_proxy1:xjs58b4limuq@brd.superproxy.io:33335'),
-#           total_urls=links)

@@ -23,7 +23,6 @@ def make_driver(headless, proxies_value):
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Maxthon/6.1.0.2000 Safari/537.36"
     ]
     user_agent = random.choice(user_agents)
-    # user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36'
     if proxies_value:
         proxy_server = proxies_value
     else:

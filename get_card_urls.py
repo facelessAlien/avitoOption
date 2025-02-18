@@ -233,11 +233,3 @@ def get_urls(thread, driver, response: str, requests_pause: int = None, categori
 
     return total_urls
 
-
-#
-# url = f'https://api.telegram.org/bot6872359072:AAH3A3DwnWsyD1rTx4PWl-P_yRtIC_rHH_Q/sendMessage'
-# payload = {
-#     'chat_id': '793349228',
-#     'text': 'hello'
-# }
-# requests.post(url, data=payload)

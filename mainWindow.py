@@ -252,7 +252,6 @@ class MainWindow(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
-    # app.setWindowIcon(QIcon('magnezia.ico'))
     window = MainWindow()
     app.setWindowIcon(QIcon('ico/avito.ico'))
 

@@ -25,4 +25,3 @@ def send_to_telegram(message: str, token, chat_id):
         return True
     except:
         return False
-#  PPR06XHY9ID:vRin4eTEVZkt8H@146.185.207.3:3081
