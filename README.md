@@ -45,7 +45,7 @@
 > **Требования:** Python 3.10+ и `pip`
 
 ```sh
-git clone https://github.com/facelessAlien/avitoOption/avitoOption.git
+[git clone https://github.com/facelessAlien/avitoOption/avitoOption.git](https://github.com/facelessAlien/avitoOption.git)
 cd avitoOption
 python -m venv venv
 source venv/bin/activate  # Для Linux/macOS
