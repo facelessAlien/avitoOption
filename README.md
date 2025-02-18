@@ -53,3 +53,7 @@ venv\Scripts\activate      # Для Windows
 pip install -r requirements.txt
 python avitoOption.py
 ```
+## 📦 Скачать скомпилированную версию
+
+Или конкретную версию:
+- [Скачать v1.0.0](https://github.com/facelessAlien/avitoOption/releases/tag/v1.0.0)
