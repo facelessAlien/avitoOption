@@ -1,0 +1,23 @@
+{
+    "city": "moskva",
+    "user_response": "рыбаловная удочка",
+    "keywords": [],
+    "black_list": [
+        "чехол",
+        "навес",
+        "кейс",
+        "акксесуары"
+    ],
+    "categories": "/nedvizhimost",
+    "max_price": 9999999999,
+    "min_price": 10000,
+    "max_page": 3,
+    "pause": 0,
+    "requests_pause": 3,
+    "telegram_bot_token": "6872359072:AAH3A3DwnWsyD1rTx4PWl-P_yRtIC_rHH_Q::793349228",
+    "proxy": "brd-customer-hl_6bc68763-zone-datacenter_proxy1:rr1zxjedkday@brd.superproxy.io:33335",
+    "deep_search": false,
+    "headless": false,
+    "send_tg": false,
+    "update": false
+}
