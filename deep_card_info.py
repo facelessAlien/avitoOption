@@ -37,7 +37,7 @@ def send_message_to_telegram(text, tg_token, chat_id):
                 data={'chat_id': chat_id, 'text': part}
             )
 
-def card_info(thread, driver, total_urls: list, tg_token: str = None, chat_id: str = None):
+def card_info(thread, driver, total_urls: list, tg_token: str = None, chat_id: str = None, requests_pause: int = 0):
     """Собираем информацию с карточки товара с возможностью остановки"""
     print(f'\n\n{"+" * 25} ЗАПУСК СБОРА ИНФОРМАЦИИ ПО КАРТЕ ТОВАРА {"+" * 25}\n')
     print("🔸" * 50 + '\n\n')
@@ -45,7 +45,8 @@ def card_info(thread, driver, total_urls: list, tg_token: str = None, chat_id: s
         if not thread.running:
             print("⚠️ Остановка сбора информации по карточкам товаров...")
             return
-
+        print(f"⏳ Ожидание {requests_pause} секунд перед следующим обновлением...")
+        time.sleep(requests_pause)
         driver.get(total_url)
 
         # Получаем и декодируем исходный код страницы

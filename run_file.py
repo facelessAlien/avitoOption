@@ -95,7 +95,7 @@ def run(thread):
             break
 
     if thread.running and deep_search:
-        card_info(thread, driver, total_urls=is_get_urls, tg_token=tg_token, chat_id=chat_id)  # Передаём thread!
+        card_info(thread, driver, total_urls=is_get_urls, tg_token=tg_token, chat_id=chat_id, requests_pause=requests_pause)  # Передаём thread!
 
     print('\nПарсинг завершен!')
     driver.close()
