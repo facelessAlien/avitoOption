@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDialog, QLineEdit,
-    QListView, QListWidget, QListWidgetItem, QSizePolicy,
-    QWidget)
+    QListView, QListWidget, QListWidgetItem, QPushButton,
+    QSizePolicy, QWidget)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
@@ -140,6 +140,16 @@ class Ui_Dialog(object):
         self.lineEdit_search = QLineEdit(Dialog)
         self.lineEdit_search.setObjectName(u"lineEdit_search")
         self.lineEdit_search.setGeometry(QRect(940, 10, 241, 31))
+        self.line_found_count = QLineEdit(Dialog)
+        self.line_found_count.setObjectName(u"line_found_count")
+        self.line_found_count.setGeometry(QRect(940, 40, 231, 31))
+        self.line_found_count.setReadOnly(True)
+        self.btn_down = QPushButton(Dialog)
+        self.btn_down.setObjectName(u"btn_down")
+        self.btn_down.setGeometry(QRect(940, 80, 71, 31))
+        self.btn_up = QPushButton(Dialog)
+        self.btn_up.setObjectName(u"btn_up")
+        self.btn_up.setGeometry(QRect(1020, 80, 71, 31))
 
         self.retranslateUi(Dialog)
 
@@ -148,5 +158,9 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
+        self.lineEdit_search.setPlaceholderText(QCoreApplication.translate("Dialog", u"\u043f\u043e\u0438\u0441\u043a", None))
+        self.line_found_count.setPlaceholderText(QCoreApplication.translate("Dialog", u"\u043a\u043e\u043b-\u0432\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", None))
+        self.btn_down.setText(QCoreApplication.translate("Dialog", u"\u0412\u041d\u0418\u0417", None))
+        self.btn_up.setText(QCoreApplication.translate("Dialog", u"\u0412\u0412\u0415\u0420\u0425", None))
     # retranslateUi
 
