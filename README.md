@@ -53,7 +53,7 @@ venv\Scripts\activate      # Для Windows
 pip install -r requirements.txt
 python avitoOption.py
 ```
-![окно настроек](imgs/1.png)
+![окно настроек](imgs/1.PNG)
 
 ## 🔧 Настройки поиска
 
