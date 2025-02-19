@@ -1,0 +1,18 @@
+{
+    "city": "",
+    "user_response": "",
+    "keywords": [],
+    "black_list": [],
+    "categories": "",
+    "max_price": 9999999999,
+    "min_price": 0,
+    "max_page": 1,
+    "pause": 0,
+    "requests_pause": 0,
+    "telegram_bot_token": "",
+    "proxy": "",
+    "deep_search": false,
+    "headless": false,
+    "send_tg": false,
+    "update": false
+}
