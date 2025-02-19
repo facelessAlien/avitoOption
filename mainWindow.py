@@ -42,6 +42,7 @@ class MainWindow(QMainWindow):
         self.ui.checkBox_update.setToolTip(
             "Каждый заданный интервал парсер проверяет на наличие новых объявлений, а так же мониторит изменение цен на уже спаршенных объявлениях")
         self.ui.checkBox_send_tg.setToolTip("Если включить данный чек бокс, то все данные будут отправлены в телеграм")
+        self.ui.checkBox_js.setToolTip("Отключаем JS на странице, ускоряет парсинг, но иногда могут возникнуть проблемы")
         self.ui.line_proxy.setToolTip(
             "Желательно ротационный прокси с российскими (СНГ) ip вдресами, чтобы ваш ip менялся каждый запрос или каждые несколько секунд")
         self.ui.line_tg_token.setToolTip("Ведите токен вашего телеграм бота и его chat id в формате 'token::chat_id'")
@@ -59,12 +60,14 @@ class MainWindow(QMainWindow):
         self.ui.line_requests_pause.editingFinished.connect(self.update_config)
         self.ui.line_category.editingFinished.connect(self.update_config)
 
+        self.ui.checkBox_js.stateChanged.connect(self.update_config)
         self.ui.checkBox_detail_cards_info.stateChanged.connect(self.update_config)
         self.ui.checkBox_headless.stateChanged.connect(self.update_config)
         self.ui.checkBox_send_tg.stateChanged.connect(self.update_config)
         self.ui.checkBox_update.stateChanged.connect(self.update_config)
         # Когда `checkBox_update` включен → отключаем `checkBox_detail_cards_info`
         self.ui.checkBox_update.stateChanged.connect(self.toggle_checkboxes)
+
 
         # Когда `checkBox_detail_cards_info` включен → отключаем `checkBox_update`
         self.ui.checkBox_detail_cards_info.stateChanged.connect(self.toggle_checkboxes)
@@ -126,6 +129,7 @@ class MainWindow(QMainWindow):
         self.ui.checkBox_headless.setChecked(self.config.get("headless", False))
         self.ui.checkBox_send_tg.setChecked(self.config.get("send_tg", False))
         self.ui.checkBox_update.setChecked(self.config.get("update", False))
+        self.ui.checkBox_js.setChecked(self.config.get("js_control", False))
 
     def update_config(self):
         """Обновляет конфиг при изменении значений в UI"""
@@ -168,6 +172,7 @@ class MainWindow(QMainWindow):
         self.config["headless"] = self.ui.checkBox_headless.isChecked()
         self.config["send_tg"] = self.ui.checkBox_send_tg.isChecked()
         self.config["update"] = self.ui.checkBox_update.isChecked()
+        self.config["js_control"] = self.ui.checkBox_js.isChecked()
 
         save_config(self.config)  # Сохраняем изменения в конфиге
 

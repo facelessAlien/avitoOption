@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import InvalidArgumentException, NoSuchElementException, WebDriverException
 
 
-def make_driver(headless, proxies_value):
+def make_driver(headless, proxies_value, js):
     """ Функция инициализирует объект seleniumbase Driver """
     user_agents = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
@@ -27,7 +27,7 @@ def make_driver(headless, proxies_value):
         proxy_server = proxies_value
     else:
         proxy_server = None
-    driver = Driver(uc=True, undetectable=True, headless2=headless, proxy=proxy_server, agent=user_agent, block_images=True)
+    driver = Driver(uc=True, undetectable=True, headless2=headless, proxy=proxy_server, agent=user_agent, block_images=True, disable_js=js)
     return driver
 
 

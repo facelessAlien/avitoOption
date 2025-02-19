@@ -43,6 +43,7 @@ def run(thread):
     update = config["update"]
     pause = config["pause"]
     requests_pause = config["requests_pause"]
+    js = config['js_control']
     category_file = find_category_file(categories)
     if send_tg:
         try:
@@ -65,6 +66,7 @@ def run(thread):
           f'\n🛠️ Глубокий парсинг: {"Включен" if deep_search else "Выключен"}'
           f'\n📤 Отправка в Telegram: {"Включена" if send_tg else "Выключена"}'
           f'\n🔄 Обновления: {"Включены" if update else "Выключены"}'
+          f'\n📟 Java Script: {"Включены" if js else "Выключены"}'
           f'\n📡 Прокси: {proxies_value if proxies_value else "Не используется"}'
           f'\n🖥️ Режим браузера: {"Без интерфейса (headless)" if headless else "С открытым окном"}'
           )
@@ -79,7 +81,7 @@ def run(thread):
 
     encode_user_response = encode_url(text=user_response)
 
-    driver = make_driver(headless=headless, proxies_value=proxies_value)
+    driver = make_driver(headless=headless, proxies_value=proxies_value, js=js)
 
     while thread.running:  # Проверяем, не нажал ли пользователь "Стоп"
         is_get_urls = get_urls(thread, driver, categories=categories, city=city, max_page=max_page,
