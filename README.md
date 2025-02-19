@@ -81,9 +81,10 @@ python avitoOption.py
 ERROR: To modify pip, please run the following command:
 C:\Python3.11.8\python.exe -m pip install seleniumbase
 ```
-то выполните предложенную команду:
+то выполните предложенную команду, в моем случае это:
 ```sh
-python -m pip install seleniumbase
+C:\Users\PC\Desktop\avitoOption\venv\Scripts\python.exe -m pip install -r requirements.txt
+так же команда в вашем терминале будет выделена красным цветом, просто скопируйте эту команду целиком и вставьте в терминал
 ```
 Примечание: Путь к Python может отличаться в зависимости от вашей установки.
 ---
