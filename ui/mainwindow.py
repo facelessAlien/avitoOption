@@ -215,6 +215,21 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2 = QGridLayout()
         self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.checkBox_update = QCheckBox(self.centralwidget)
+        self.checkBox_update.setObjectName(u"checkBox_update")
+
+        self.gridLayout_2.addWidget(self.checkBox_update, 2, 0, 1, 1)
+
+        self.checkBox_detail_cards_info = QCheckBox(self.centralwidget)
+        self.checkBox_detail_cards_info.setObjectName(u"checkBox_detail_cards_info")
+
+        self.gridLayout_2.addWidget(self.checkBox_detail_cards_info, 0, 0, 1, 2)
+
+        self.checkBox_headless = QCheckBox(self.centralwidget)
+        self.checkBox_headless.setObjectName(u"checkBox_headless")
+
+        self.gridLayout_2.addWidget(self.checkBox_headless, 3, 0, 1, 1)
+
         self.line_pause = QLineEdit(self.centralwidget)
         self.line_pause.setObjectName(u"line_pause")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
@@ -228,20 +243,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.line_pause, 2, 1, 1, 1)
 
-        self.checkBox_headless = QCheckBox(self.centralwidget)
-        self.checkBox_headless.setObjectName(u"checkBox_headless")
+        self.checkBox_js = QCheckBox(self.centralwidget)
+        self.checkBox_js.setObjectName(u"checkBox_js")
 
-        self.gridLayout_2.addWidget(self.checkBox_headless, 3, 0, 1, 1)
-
-        self.checkBox_detail_cards_info = QCheckBox(self.centralwidget)
-        self.checkBox_detail_cards_info.setObjectName(u"checkBox_detail_cards_info")
-
-        self.gridLayout_2.addWidget(self.checkBox_detail_cards_info, 0, 0, 1, 2)
-
-        self.checkBox_update = QCheckBox(self.centralwidget)
-        self.checkBox_update.setObjectName(u"checkBox_update")
-
-        self.gridLayout_2.addWidget(self.checkBox_update, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.checkBox_js, 4, 0, 1, 1)
 
 
         self.gridLayout_5.addLayout(self.gridLayout_2, 2, 0, 1, 1)
@@ -326,10 +331,11 @@ class Ui_MainWindow(object):
         self.btn_start.setText(QCoreApplication.translate("MainWindow", u"\u043e\u043a\u043d\u043e \u043f\u0430\u0440\u0441\u0438\u043d\u0433\u0430", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u043e\u0438\u0441\u043a\u0430", None))
         self.btn_donate.setText(QCoreApplication.translate("MainWindow", u"\u2615 \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u0430", None))
-        self.line_pause.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u043f\u0430\u0443\u0437\u0430 \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0430\u0445, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440: 10000", None))
-        self.checkBox_headless.setText(QCoreApplication.translate("MainWindow", u"\u0441\u043a\u0440\u044b\u0442\u044b\u0439 \u0440\u0435\u0436\u0438\u043c", None))
-        self.checkBox_detail_cards_info.setText(QCoreApplication.translate("MainWindow", u"\u0434\u0435\u0442\u0430\u043b\u044c\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435 \u0438\u0437 \u043a\u0430\u0440\u0442\u043e\u0447\u0435\u043a", None))
         self.checkBox_update.setText(QCoreApplication.translate("MainWindow", u"\u0440\u0435\u0436\u0438\u043c \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430", None))
+        self.checkBox_detail_cards_info.setText(QCoreApplication.translate("MainWindow", u"\u0434\u0435\u0442\u0430\u043b\u044c\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435 \u0438\u0437 \u043a\u0430\u0440\u0442\u043e\u0447\u0435\u043a", None))
+        self.checkBox_headless.setText(QCoreApplication.translate("MainWindow", u"\u0441\u043a\u0440\u044b\u0442\u044b\u0439 \u0440\u0435\u0436\u0438\u043c", None))
+        self.line_pause.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u043f\u0430\u0443\u0437\u0430 \u0432 \u0441\u0435\u043a\u0443\u043d\u0434\u0430\u0445, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440: 10000", None))
+        self.checkBox_js.setText(QCoreApplication.translate("MainWindow", u"JS ", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0441 \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442", None))
         self.line_tg_token.setPlaceholderText(QCoreApplication.translate("MainWindow", u"\u0442\u043e\u043a\u0435\u043d \u0442\u0435\u043b\u0435\u0433\u0440\u0430\u043c \u0431\u043e\u0442\u0430 \u0438 \u0447\u0430\u0442 id", None))
         self.btn_check_tg_token.setText(QCoreApplication.translate("MainWindow", u"\u043f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c \u0442\u043e\u043a\u0435\u043d", None))

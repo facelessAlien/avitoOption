@@ -177,6 +177,51 @@ QPushButton:pressed {
      <height>31</height>
     </rect>
    </property>
+   <property name="placeholderText">
+    <string>поиск</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="line_found_count">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>40</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="placeholderText">
+    <string>кол-во совпадений</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_down">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>80</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ВНИЗ</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_up">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>80</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ВВЕРХ</string>
+   </property>
   </widget>
  </widget>
  <resources/>
