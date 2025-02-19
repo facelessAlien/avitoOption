@@ -53,7 +53,16 @@ venv\Scripts\activate      # Для Windows
 pip install -r requirements.txt
 python avitoOption.py
 ```
-
+Важно: Если при установке зависимостей возникает ошибка, связанная с seleniumbase, например:
+```sh
+ERROR: To modify pip, please run the following command:
+C:\Python3.11.8\python.exe -m pip install seleniumbase
+```
+то выполните предложенную команду:
+```sh
+python -m pip install seleniumbase
+```
+Примечание: Путь к Python может отличаться в зависимости от вашей установки.
 
 ## 🔧 Настройки поиска
 ![окно настроек](imgs/1.PNG)
