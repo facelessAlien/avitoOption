@@ -28,8 +28,14 @@ class CategoryWindow(QMainWindow):
         # Подключаем поиск по категориям
         self.ui.lineEdit_search.textChanged.connect(self.filter_categories)
 
-        # Храним изначальный список элементов
+        # Подключаем кнопки навигации (предполагается, что они есть в UI)
+        self.ui.btn_down.clicked.connect(self.next_found_item)
+        self.ui.btn_up.clicked.connect(self.previous_found_item)
+
+        # Храним изначальный список элементов и данные поиска
         self.original_items = []
+        self.found_items = []  # Список найденных элементов
+        self.current_found_index = -1
 
     def load_main_categories(self):
         """Сканирует папку 'categories' и находит все JSON-файлы, создавая карту категорий"""
@@ -98,29 +104,54 @@ class CategoryWindow(QMainWindow):
             json.dump(config, file, indent=4, ensure_ascii=False)
 
     def filter_categories(self):
-        """Фильтрует подкатегории в listWidget_total_categories_2, выделяет совпадения и прокручивает к первому найденному."""
+        """Фильтрует подкатегории, выделяет совпадения, обновляет счетчик и сбрасывает индекс навигации."""
         search_text = self.ui.lineEdit_search.text().strip().lower()
         found_items = []
         count = self.ui.listWidget_total_categories_2.count()
 
         for i in range(count):
             item = self.ui.listWidget_total_categories_2.item(i)
-
             if not search_text:
-                # Сбрасываем фон и цвет текста
                 item.setBackground(QColor("transparent"))
-                item.setForeground(QColor("white"))  #
+                item.setForeground(QColor("white"))
             else:
                 if search_text in item.text().lower():
-                    item.setBackground(QColor("#FFD700"))  # Жёлтый фон
+                    item.setBackground(QColor("#FFD700"))  # Желтый фон
                     item.setForeground(QColor("black"))
                     found_items.append(item)
                 else:
                     item.setBackground(QColor("transparent"))
                     item.setForeground(QColor("white"))
 
+        # Сохраняем найденные элементы и обновляем счетчик
+        self.found_items = found_items
         if found_items:
+            self.current_found_index = 0
+            self.ui.line_found_count.setText(f"{len(found_items)} найдено, позиция: 1")
             self.ui.listWidget_total_categories_2.scrollToItem(found_items[0])
+        else:
+            self.current_found_index = -1
+            self.ui.line_found_count.setText("0 найдено")
+
+    def next_found_item(self):
+        """Перемещается к следующему найденному элементу."""
+        if self.found_items:
+            self.current_found_index = (self.current_found_index + 1) % len(self.found_items)
+            current_item = self.found_items[self.current_found_index]
+            self.ui.listWidget_total_categories_2.scrollToItem(current_item)
+            self.ui.line_found_count.setText(
+                f"{len(self.found_items)} найдено, позиция: {self.current_found_index + 1}"
+            )
+
+    def previous_found_item(self):
+        """Перемещается к предыдущему найденному элементу."""
+        if self.found_items:
+            self.current_found_index = (self.current_found_index - 1) % len(self.found_items)
+            current_item = self.found_items[self.current_found_index]
+            self.ui.listWidget_total_categories_2.scrollToItem(current_item)
+            self.ui.line_found_count.setText(
+                f"{len(self.found_items)} найдено, позиция: {self.current_found_index + 1}"
+            )
 
     def reset_category_colors(self):
         """Сбрасывает все выделения, если строка поиска пустая"""
