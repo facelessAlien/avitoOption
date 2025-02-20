@@ -14,5 +14,6 @@
     "deep_search": false,
     "headless": false,
     "send_tg": false,
-    "update": false
+    "update": false,
+    "js_control": false
 }
